@@ -6,6 +6,10 @@ const $styles = [
         name: 'index',
         link: `/css/index.css`,
     },
+    {
+        name: 'reset',
+        link: `/css/reset.css`,
+    },
 ];
 
 const $scripts = [
