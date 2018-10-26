@@ -6,20 +6,12 @@ const $styles = [
         name: 'index',
         link: `/css/index.css`,
     },
-    {
-        name: 'index2',
-        link: `/css/index.js`,
-    },
 ];
 
 const $scripts = [
     {
         name: 'index',
         link: `/js/index.js`,
-    },
-    {
-        name: 'stuff',
-        href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor',
     },
 ];
 
