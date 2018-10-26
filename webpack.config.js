@@ -1,4 +1,6 @@
 const path = require('path');
+const fs = require('fs');
+
 const ClosureCompilerPlugin = require('webpack-closure-compiler');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -59,11 +61,22 @@ const js = {
 
 const css = {
     mode,
-    entry: {
-        index: [
-            path.resolve(__dirname, 'static/scss/index.scss'),
-        ],
-    },
+    entry:
+        fs.readdirSync(path.resolve(__dirname, 'static/scss'))
+          .map((name) => ([ name, path.resolve(__dirname, 'static/scss', name) ]))
+          .filter(([ name, filePath ]) => fs.lstatSync(filePath).isFile())
+          .reduce(
+              (acc, [ name, filePath ]) =>
+                  Object.assign(
+                      acc,
+                      {
+                          [ name.split('.').slice(0, -1).join('.') ]: [
+                              filePath,
+                          ],
+                      },
+                  ),
+              {},
+          ),
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'public/css'),
