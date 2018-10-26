@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- include _/head.ejs -%>
+    </head>
+    <body>
+        <div id="wrap">
+            <% if(!locals.page) { -%>
+                <%- include error.ejs -%>
+            <% } else { -%>
+                <%- include _/scripts.ejs -%>
+                <%- include(locals.page, locals) -%>
+            <% } %>
+        </div>
+    </body>
+</html>
