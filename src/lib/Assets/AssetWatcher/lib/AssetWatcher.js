@@ -35,11 +35,6 @@ export class AssetWatcher {
         if (names.length === 1 && names[ 0 ] === '*')
             return this.assets;
 
-        console.log('|>\n');
-        console.log(JSON.stringify(this.assets, null, 4));
-        console.log(JSON.stringify(names, null, 4));
-        console.log('\n');
-
         return this.assets.filter((asset) => names.includes(asset.name));
     }
 
