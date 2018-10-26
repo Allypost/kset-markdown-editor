@@ -49,6 +49,7 @@ const js = {
                     use_types_for_optimization: false,
                     rewrite_polyfills: true,
                     debug: true,
+                    isolation_mode: 'IIFE',
                 },
                 concurrency: 3,
             },
