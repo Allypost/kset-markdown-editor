@@ -5,9 +5,16 @@ import createError  from 'http-errors';
 import logger       from 'morgan';
 import path         from 'path';
 
+import { scripts, styles }       from './assets';
 import { router as indexRouter } from './routes/index';
 
 const app = express();
+
+app.locals = {
+    $_styles: styles,
+    $_scripts: scripts,
+    rmWhitespace: true,
+};
 
 // view engine setup
 app.set('views', path.resolve(__dirname, 'views'));
