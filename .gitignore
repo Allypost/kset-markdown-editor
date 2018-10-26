@@ -1,0 +1,5 @@
+/.idea/
+/server.production.js
+/node_modules/
+/public/*
+!/public/favicon.ico
