@@ -35,7 +35,11 @@ export class AssetWatcher {
         if (names.length === 1 && names[ 0 ] === '*')
             return this.assets;
 
-        return this.assets.filter((asset) => names.includes(asset.name));
+        return (
+            this.assets
+                .filter((asset) => names.includes(asset.name))
+                .map((asset) => asset.get())
+        );
     }
 
 }

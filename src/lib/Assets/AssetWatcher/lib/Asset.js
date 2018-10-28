@@ -18,16 +18,12 @@ export class Asset {
             this.watch();
     }
 
+    get() {
+        return this.resource;
+    }
+
     get name() {
         return this.resource.name;
-    }
-
-    get tag() {
-        return this.resource.tag;
-    }
-
-    get link() {
-        return this.resource.link;
     }
 
     get resourceData() {
