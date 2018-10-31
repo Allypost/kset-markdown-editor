@@ -47,10 +47,8 @@ const js = {
                 compiler: {
                     language_in: 'ECMASCRIPT_NEXT',
                     language_out: 'ECMASCRIPT3',
-                    compilation_level: 'ADVANCED',
-                    use_types_for_optimization: false,
+                    compilation_level: 'SIMPLE',
                     rewrite_polyfills: true,
-                    debug: true,
                     isolation_mode: 'IIFE',
                 },
                 concurrency: 3,
