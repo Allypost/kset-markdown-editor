@@ -10,12 +10,20 @@ const $styles = [
         name: 'reset',
         link: `/css/reset.css`,
     },
+    {
+        name: 'login',
+        link: `/css/login.css`,
+    },
 ];
 
 const $scripts = [
     {
         name: 'index',
         link: `/js/index.js`,
+    },
+    {
+        name: 'login',
+        link: `/js/login.js`,
     },
 ];
 

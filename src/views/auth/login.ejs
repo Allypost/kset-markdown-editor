@@ -1,0 +1,26 @@
+<div id="login-container">
+    <form action="" method="POST">
+        <fieldset>
+            <legend><h1 class="form-title">Login</h1></legend>
+            <div class="form-inputs">
+                <div class="form-input">
+                    <input id="username" type="text" name="username" required autofocus>
+                    <label for="username">Username</label>
+                </div>
+                <div class="form-input">
+                    <input id="password" type="password" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="form-input">
+                    <input type="submit" value="Login">
+                </div>
+                <input type="hidden" name="<%= csrf.name -%>" value="<%= csrf.value -%>">
+            </div>
+        </fieldset>
+    </form>
+</div>
+<script>
+    (function() {
+        new Login(document.querySelector('form'));
+    })();
+</script>

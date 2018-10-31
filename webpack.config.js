@@ -29,6 +29,9 @@ const js = {
         index: [
             path.resolve(__dirname, 'static/js/index.js'),
         ],
+        login: [
+            path.resolve(__dirname, 'static/js/login.js'),
+        ],
     },
     output: {
         filename: '[name].js',
